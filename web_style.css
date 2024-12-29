@@ -1,4 +1,13 @@
 .center {
   text-align: center;
-  font-family: system-ui, "Segoe UI", sans-serif;
+  font-family: "Segoe UI";
+  color: rgb(36, 36, 138);
+}
+.center .intro {
+  color: black;
+}
+
+.bg {
+  padding: 0%;
+  margin: 0%;
 }/*# sourceMappingURL=web_style.css.map */
