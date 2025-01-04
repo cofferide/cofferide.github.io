@@ -1,0 +1,27 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+    @include gradient2;
+
+    .collapse {
+        color: rgba($color: white, $alpha: 0.8);
+    }
+
+    .imdev {
+        font-weight: normal;
+        font-family: sans-serif;
+        color: rgba(255, 255, 255, 0.827);
+    }
+
+    li {
+        padding: 0 0.7rem;
+
+        a {
+            color: rgba(255, 255, 255, 0.827) !important;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+
+}

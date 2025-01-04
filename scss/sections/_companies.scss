@@ -1,0 +1,67 @@
+@use '../components/mixins' as *;
+
+.companies {
+    padding: 0 0 5rem 0;
+
+    h4 {
+        color: rgba(255, 255, 255, 0.827);
+    }
+
+    &-logo-box {
+        max-width: 100%;
+        padding-bottom: 2.5rem;
+        text-align: center;
+        position: relative;
+    }
+
+    a {
+        padding: 0.5rem;
+        position: relative;
+    }
+
+    a::after {
+        content: '';
+        background: conic-gradient(from var(--angle), transparent, rgba(rgb(10, 240, 228), 0.9), rgba(rgb(242, 255, 2), 0.9), transparent);
+        height: 320%;
+        width: 110%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        position: absolute;
+        z-index: -1;
+        padding: 3px;
+        border-radius: 30%;
+        animation: 3s spin linear infinite;
+    }
+
+    a::before {
+        filter: blur(1.5rem);
+        opacity: 0.5;
+    }
+
+    img:hover{
+        animation: logo 3.5s linear infinite;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    
+    to {
+        --angle: 360deg;
+    }
+}
+
+@keyframes logo {
+    to {
+        transform:rotateY(-360deg);
+    }
+}
