@@ -12079,7 +12079,7 @@ textarea.form-control-lg {
   overflow: hidden;
   width: 0;
   transition: ease-out;
-  animation: typing 3s steps(50, end) infinite;
+  animation: typing 3s steps(50, end) forwards;
 }
 
 @keyframes typing {
@@ -12125,7 +12125,7 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 .companies img:hover {
-  animation: logo 3.5s linear infinite;
+  animation: logo 3.5s infinite;
 }
 
 @property --angle {
@@ -12142,8 +12142,11 @@ textarea.form-control-lg {
   }
 }
 @keyframes logo {
+  from {
+    transform: rotateY(0deg);
+  }
   to {
-    transform: rotateY(-360deg);
+    transform: rotateY(360deg);
   }
 }
 body {

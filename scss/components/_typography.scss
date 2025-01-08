@@ -72,7 +72,7 @@
     overflow: hidden;
     width: 0; 
     transition: ease-out;
-    animation: typing 3s steps(50, end) infinite;
+    animation: typing 3s steps(50, end) forwards;
 }
 
 @keyframes typing {
